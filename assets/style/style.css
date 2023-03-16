@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    background-color: #6862e6;
+    background: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-family: "Kumbh Sans", sans-serif;
+
+}
+
+main {
+    background-color: #ffffff;
+    box-shadow: 0px 50px 50px -20px #35127a7f;
+    width: 327px;
+    height: 100%;
+    border-radius: 23px;
+    position: relative;
+    margin-bottom: 85px;
+    padding: 0 24px 100px;
+
+}
+
+.img-section .mobile {
+    width: 236.85px;
+    position: absolute;
+    top: -100px;
+    left: 50px;
+}
+
+.img-section .mobile-pattern {
+    left: 50px;
+    position: absolute;
+}
+
+.faq {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.faq .content {
+    border-bottom: 1px solid #e8e8ea;
+    width: 279px;
+}
+
+.faq h1 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #1e1f36;
+    margin-top: 132px;
+    align-self: center;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.faq .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.faq p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-family: "Kumbh Sans", sans-serif;
+    padding-bottom: 18px;
+    padding-top: 18px;
+}
+
+.content .question:hover {
+    font-weight: bold;
+}
+
+.content.active .question {
+    font-weight: 700;
+}
+
+.content.active .answer {
+    transition: all 0.3s ease-out;
+    display: block;
+}
+
+.question:hover {
+    color: #f47b56;
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+.content.active .arrow {
+    transform: rotate(180deg);
+}
+
+.content .answer {
+    display: none;
+}
+
+.content .answer.show {
+    display: block;
+}
+
+.desktop {
+    display: none;
+}
+
+.desktop-pattern {
+    display: none;
+}
+
+/* desktop */
+@media only screen and (min-width: 1024px) {
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+        margin-left: -100px;
+        position: relative;
+
+    }
+
+    .box {
+        position: absolute;
+        bottom: 175px;
+        left: -20px;
+    }
+
+    .mobile-pattern {
+        display: none;
+    }
+
+    .desktop-pattern {
+        display: block;
+        position: absolute;
+        bottom: -110px;
+        left: -570px;
+        overflow: hidden;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    main {
+        display: flex;
+        width: 920px;
+        height: 509px;
+        align-items: center;
+        justify-content: baseline;
+        gap: 88px;
+
+    }
+
+    .faq {
+        align-self: flex-start;
+        margin-top: -50px;
+    }
+
+    .faq h1 {
+        align-self: flex-start;
+    }
+}
